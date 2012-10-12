@@ -25,6 +25,7 @@ public class Main {
             Vector adjcent_cities = city.get_adjacent_cities();
             System.out.print(city.getCityName()+" : [ ");
             for(int i=0; i<adjcent_cities.size(); i++){
+                
                 System.out.print(((CityNode)adjcent_cities.get(i)).getCityName()+" ");
             }
             System.out.println("]");

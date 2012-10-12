@@ -34,8 +34,14 @@ public class SearchTree {
         if(!added.contains(city_node)){
             if(root==null)
                 root=city_node;
-            Vector adjcent_nodes = adjacent_nodes_of(city_node);
+            Vector<CityNode> adjcent_nodes = adjacent_nodes_of(city_node);
             this.adjacent_cities.addAll(adjcent_nodes);
+            
+            
+            for(int i=0; i<adjcent_nodes.size(); i++){
+                adjcent_nodes.get(i).parent = city_node;
+            }
+            
             city_node.add_adjacent_cities(adjcent_nodes);
             added.add(city_node);
         }

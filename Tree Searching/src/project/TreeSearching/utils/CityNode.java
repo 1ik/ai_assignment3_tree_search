@@ -14,6 +14,7 @@ import java.util.Vector;
 public class CityNode {
     private String cityname;
     private Vector<CityNode> cityLists;
+    public CityNode parent;
     
     public CityNode(String cityName){
         this.cityname=cityName;
