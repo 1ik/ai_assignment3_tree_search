@@ -15,10 +15,12 @@ public class CityNode {
     private String cityname;
     private Vector<CityNode> cityLists;
     public CityNode parent;
+    public boolean visited;
     
     public CityNode(String cityName){
         this.cityname=cityName;
         cityLists = new Vector<CityNode>();
+        visited = false;
     }
     
     public CityNode(String cityName, String adjacentCities[]){
